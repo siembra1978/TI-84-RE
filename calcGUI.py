@@ -78,16 +78,11 @@ class entryGUI:
             #self.bar.entryconfig(1, label="Loading...")
             #print("Loading...")
 
-            answer = calculator.wolframCalc.answer(strvalue)  # Contacts the calculator with the entry using WolfRamAlpha
-            self.giveAnswer(answer)  # Returns the solution to the giveAnswer() function
-
-            '''
             try:
                 answer = calculator.wolframCalc.answer(strvalue)  # Contacts the calculator with the entry using WolfRamAlpha
                 self.giveAnswer(answer)  # Returns the solution to the giveAnswer() function
             except:
                 self.giveAnswer('(WiFi: On) ERROR: INVALID EXPRESSION')  # If WolfRamAlpha is unable to give an answer
-            '''
 
         elif not internet.is_connected(internet.REMOTE_SERVER):
             print(
